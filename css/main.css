@@ -1,0 +1,330 @@
+body {
+	background: gray url(../images/logo.png) no-repeat center 200px;
+	color: #333333;
+	font: 14px normal Arial, Helvetica, sans-serif;
+}
+a {
+	text-decoration: none;
+	color: #333333;
+}
+#header {
+	height: 30px;
+	background: #ffffff; /* Old browsers */
+	background: -moz-linear-gradient(top,  #ffffff 1%, #dbdbdb 51%, #cecece 52%, #a0a0a0 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#ffffff), color-stop(51%,#dbdbdb), color-stop(52%,#cecece), color-stop(100%,#a0a0a0)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #ffffff 1%,#dbdbdb 51%,#cecece 52%,#a0a0a0 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #ffffff 1%,#dbdbdb 51%,#cecece 52%,#a0a0a0 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #ffffff 1%,#dbdbdb 51%,#cecece 52%,#a0a0a0 100%); /* IE10+ */
+	background: linear-gradient(top,  #ffffff 1%,#dbdbdb 51%,#cecece 52%,#a0a0a0 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#a0a0a0',GradientType=0 ); /* IE6-9 */
+}
+#header ul li {
+	float: left;
+	margin: 5px 5px 5px 10px;
+	font: 14px bold Arial, Helvetica, sans-serif;
+	color: #333333;
+}
+
+ul {
+	list-style: none;
+}
+input[type=text] {
+	width: 30px;
+}
+
+
+#paintArea {
+	position: absolute;
+	top: 30px;
+	left:60px;
+	background: url(../images/checkerboardBg.png) repeat;
+}
+#paintArea canvas {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+#toolBox, #optionBox, #layerBox, #tools {
+	background: #ffffff; /* Old browsers */
+	background: -moz-linear-gradient(left,  #ffffff 0%, #e5e5e5 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#ffffff), color-stop(100%,#e5e5e5)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left,  #ffffff 0%,#e5e5e5 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left,  #ffffff 0%,#e5e5e5 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left,  #ffffff 0%,#e5e5e5 100%); /* IE10+ */
+	background: linear-gradient(left,  #ffffff 0%,#e5e5e5 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=1 ); /* IE6-9 */
+}
+#tools {
+	display: none;
+	position: absolute;
+	top: 30px;
+	left: 0;
+	width: 60px;
+	min-height: 500px;
+}
+#palette {
+	display: none;
+	position: absolute;
+	right: 0;
+	top: 30px;
+}
+#optionBox {
+	float: right;
+	width: 250px;
+	min-height: 700px;
+}
+#layerBox {
+	float: right;
+	width: 250px;
+	min-height: 700px;
+}
+#layerBox #layerControls {
+	margin: 0 0 40px 0;
+	position: relative;
+	top: 20px;
+	left: 10px;
+	background: url(../images/add.png) no-repeat;
+}
+#layerBox #layerControls a {
+	margin: 0 0 0 20px;
+}
+#layerBox #layers .layerItem {
+	height: 50px;
+	border-bottom: 1px dotted #666666;
+	cursor: pointer;
+}
+#layerBox #layers .layerItem span {
+	position: relative;
+	top: 0;
+	left: 70px;
+}
+#layerBox #layers .layerItem a.hide {
+	display: block;
+	width: 16px;
+	height: 16px;
+	position: relative;
+	top: 16px;
+	left: 10px;
+}
+.visibleIcon {
+	background: url(../images/visible.png) no-repeat;
+}
+.hiddenIcon {
+	background: url(../images/hidden.png) no-repeat;
+}
+#layerBox #layers .layerItem a.delete {
+	display: block;
+	width: 16px;
+	height: 16px;
+	float: right;
+	position: relative;
+	top: 0;
+	margin-right: 10px;
+	background: url(../images/delete.png) no-repeat;
+}
+#layerBox #layers .layerItem.highlighted {
+	background: #A7A7CE;
+}
+#toolBox {
+	float: right;
+	width: 250px;
+	min-height: 700px;
+}
+#toolBox ul {
+	padding: 10px;
+}
+#toolBox ul li {
+	margin: 5px;
+}
+
+span.headline {
+	font-weight: bold;
+}
+
+.moduleHeadline {
+	height: 15px;
+	padding: 10px;
+	background: #ffffff; /* Old browsers */
+	background: -moz-linear-gradient(top,  #ffffff 0%, #ebedf4 5%, #bec9dd 97%, #3a414f 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(5%,#ebedf4), color-stop(97%,#bec9dd), color-stop(100%,#3a414f)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #ffffff 0%,#ebedf4 5%,#bec9dd 97%,#3a414f 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #ffffff 0%,#ebedf4 5%,#bec9dd 97%,#3a414f 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #ffffff 0%,#ebedf4 5%,#bec9dd 97%,#3a414f 100%); /* IE10+ */
+	background: linear-gradient(top,  #ffffff 0%,#ebedf4 5%,#bec9dd 97%,#3a414f 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#3a414f',GradientType=0 ); /* IE6-9 */
+}
+.gradientControls, .brushControls {
+	padding: 10px;
+}
+/* Dialogs */
+.transparentLayer {
+	position: absolute;
+	top:0;
+	left: 0;
+	background: url(../images/transparentBg.png) repeat;
+	width: 100%;
+	height: 100%;
+}
+#newDocumentWindow {
+	margin: 250px auto 0 auto;
+	padding: 20px;
+	width: 300px;
+	height: 85px;
+	background: #ffffff; /* Old browsers */
+	background: -moz-linear-gradient(top,  #ffffff 0%, #e5e5e5 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e5e5e5)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #ffffff 0%,#e5e5e5 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #ffffff 0%,#e5e5e5 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #ffffff 0%,#e5e5e5 100%); /* IE10+ */
+	background: linear-gradient(top,  #ffffff 0%,#e5e5e5 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 ); /* IE6-9 */
+}
+#newDocumentWindow input {
+	width: 75px;
+}
+#newDocumentWindow a {
+	margin: 0 10px 0 0;
+}
+#newDocumentWindow #newDocControls {
+	position: relative;
+	bottom: -15px;
+}
+
+/* Tools */
+#tools ul {
+	margin: 10px 0 0 14px;
+}
+#tools ul li {
+	width: 32px;
+	height: 32px;
+}
+#tools ul li a{
+	display: block;
+	width: 32px;
+	height: 32px;
+}
+#toolPen {
+	background: url(../images/toolPen.png) no-repeat;
+}
+#toolBrush {
+	background: url(../images/toolBrush.png) no-repeat;
+}
+#toolFill {
+	background: url(../images/toolFill.png) no-repeat;
+}
+#toolGradient {
+	background: url(../images/toolGradient.png) no-repeat;
+}
+#toolRectangle {
+	background: url(../images/toolRectangle.png) no-repeat;
+}
+#toolCircle {
+	background: url(../images/toolCircle.png) no-repeat;
+}
+#toolFont {
+	background: url(../images/toolFont.png) no-repeat;
+}
+#colorpickerContainer {
+	position: absolute;
+	bottom: 10px;
+	margin: 10px 0 0 14px;
+	width: 32px;
+	height: 32px;
+	background: #000000;
+	border: 1px solid #333333;
+}
+#colorpickerGradient1 {
+	width: 32px;
+	height: 32px;
+	background: #000000;
+	border: 1px solid #333333;
+}
+#colorpickerGradient2 {
+	width: 32px;
+	height: 32px;
+	background: #ffffff;
+	border: 1px solid #333333;
+}
+#tools .tool.highlighted {
+	background: #A7A7CE;
+}
+#fontText {
+	width: 180px;
+}
+/* Slider */
+#opacitySlider, #radiusSlider, #gradientSlider, #gradientSliderOpacity1, #gradientSliderOpacity2, #gradientRotation, #fontSizeSlider, #shapeSlider {
+	margin: 10px;
+}
+
+/* Pres */
+#presWrapper {
+	height: 0px;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	z-index: 100;
+}
+#presButton, #presNav {
+	float: left;
+}
+#presButton {
+	position: absolute;
+	bottom: 0;
+	width: 32px;
+	height: 32px;
+	background: #cccccc url(../images/visible.png) center center no-repeat;
+}
+#presNav {
+	background: #cccccc;
+	height: 0px;
+	display: none;
+	padding: 5px;
+	margin: 0 0 0 32px;
+	z-index: 100;
+}
+#presNav a {
+	margin: 5px;
+}
+#presNav ul {
+	float: left;
+	margin: 5px;
+}
+.slide {
+	width: 800px;
+	height: 600px;
+}
+.slide h2 {
+	font: 40px bold Arial, Helvetica, sans-serif;
+	color: #333333;
+	margin: 0 0 20px 0;
+}
+.slide p {
+	font: 28px normal Arial, Helvetica, sans-serif;
+	color: #333333;
+	margin: 0 0 15px 0;
+}
+.slide ul li {
+	font: 28px normal Arial, Helvetica, sans-serif;
+	color: #333333;
+	margin: 0 0 15px 20px;
+	list-style: square;
+}
+.slide pre {
+	font-size: 24px;
+	font-family: Courier;
+	margin: 0 0 15px 0;
+}
+
+
+div.toggleToolBox, div.toggleOptionBox, div.toggleLayerBox {
+	float: right;
+	width: 32px;
+	height: 32px;
+}
+div.toggleToolBox img, div.toggleOptionBox img, div.toggleLayerBox img {
+	margin: 9px 0 0 9px;
+}
+
+pre.small {
+	font-size: 22px;
+}
