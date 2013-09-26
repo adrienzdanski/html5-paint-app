@@ -2,7 +2,7 @@ HTML5 Painting Application
 ==========================
 Computer science project for the course web-technologies at the Institute of Technology Nuremberg.
 
-* Different painting tools.
+* Different painting tools
 * Shapes
 * Text
 * Filters
