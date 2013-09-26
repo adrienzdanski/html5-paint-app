@@ -2,6 +2,14 @@ HTML5 Painting Application
 ==========================
 Computer science project for the course web-technologies at the Institute of Technology Nuremberg.
 
+* Different painting tools.
+* Shapes
+* Text
+* Filters
+* Layer System
+* Image Loading
+* Tool Configuration
+
 About
 -----
 * Author:            Adrien Zdanski
